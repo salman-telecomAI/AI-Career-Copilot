@@ -1,0 +1,7 @@
+Senior AI Solutions Architect
+
+We are looking for an experienced AI Solutions Architect with strong Telecom, DWDM, Optical Networks, Azure AI, OpenAI, Python, FastAPI, RAG, Docker, Cloud Architecture and Network Automation experience.
+
+Experience with Huawei, Ciena, Ericsson or Nokia transport networks is highly desirable.
+
+The successful candidate will work with enterprise customers to design AI-powered automation solutions for telecom networks.
