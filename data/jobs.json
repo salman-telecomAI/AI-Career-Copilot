@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "company": "BT",
+        "title": "Senior AI Solutions Architect",
+        "location": "Remote - UK",
+        "salary": "\u00a3650/day",
+        "job_url": "https://example.com/job1",
+        "description": "Azure OpenAI, FastAPI and Telecom.",
+        "match_score": 95,
+        "status": "Rejected"
+    },
+    {
+        "id": 2,
+        "company": "Vodafone",
+        "title": "Network Automation Engineer",
+        "location": "London",
+        "salary": "\u00a3600/day",
+        "job_url": "https://example.com/job2",
+        "description": "Python, Automation and Telecom.",
+        "match_score": 91,
+        "status": "New"
+    },
+    {
+        "id": 3,
+        "company": "Ericsson",
+        "title": "AI Network Architect",
+        "location": "Remote",
+        "salary": "\u00a3700/day",
+        "job_url": "https://example.com/job3",
+        "description": "AI, OSS, Azure and Telecom.",
+        "match_score": 97,
+        "status": "New"
+    }
+]

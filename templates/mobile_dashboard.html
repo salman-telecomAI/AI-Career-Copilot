@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Career Copilot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f5f5f5;
+            margin:20px;
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        .card{
+            background:white;
+            padding:15px;
+            margin-bottom:20px;
+            border-radius:10px;
+            box-shadow:0 2px 5px lightgray;
+        }
+
+        .match{
+            color:green;
+            font-weight:bold;
+        }
+
+        button{
+            padding:10px;
+            margin-right:10px;
+            margin-top:5px;
+            cursor:pointer;
+        }
+
+        .source{
+            color:#666;
+            font-size:14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>AI Career Copilot</h1>
+
+{% for job in jobs %}
+
+<div class="card">
+
+    <h2>{{ job.company }}</h2>
+
+    <h3>{{ job.title }}</h3>
+
+    <p>{{ job.location }}</p>
+
+    <p>{{ job.salary }}</p>
+
+    <p class="source">
+        Source : Adzuna
+    </p>
+
+    <p class="match">
+        Match Score : {{ job.match_score }}%
+    </p>
+
+    <p>Status : {{ job.status }}</p>
+
+    <p>
+        <a href="{{ job.job_url }}" target="_blank">
+            <button type="button">
+                🌐 Open Job
+            </button>
+        </a>
+    </p>
+
+    <form action="/application/prepare" method="post">
+
+        <input type="hidden" name="profile_id" value="1">
+
+        <input type="hidden" name="job_id" value="{{ job.id }}">
+
+        <input type="hidden" name="job_url" value="{{ job.job_url }}">
+
+        <button type="submit">
+            ✅ Approve
+        </button>
+
+    </form>
+
+    <form action="/approval/" method="post">
+
+        <input type="hidden" name="profile_id" value="1">
+
+        <input type="hidden" name="job_id" value="{{ job.id }}">
+
+        <button type="submit">
+            ❌ Reject
+        </button>
+
+    </form>
+
+</div>
+
+{% endfor %}
+
+</body>
+
+</html>
